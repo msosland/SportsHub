@@ -10,5 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :favorites
 
+  has_many :favorite_articles, through: :favorites, source: :article
+
   has_many :articles_commented_on, through: :comments, source: :article
 end
