@@ -8,10 +8,7 @@ class Homepage extends React.Component {
         <div className="body">
           <div>Text: {this.props.text}</div>
           <div>
-            <TagSearch query="nba" />
-            <TagSearch query="nfl" />
-            <TagSearch query="nhl" />
-            <TagSearch query="mlb" />
+            <TagSearch query="nba" /><TagSearch query="nfl" /><TagSearch query="nhl" /><TagSearch query="mlb" />
           </div>
         </div>
       </div>
