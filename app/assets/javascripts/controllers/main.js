@@ -9,7 +9,11 @@ angular.module('sportsHub')
 
     $scope.addArticle = function(){
       if(!$scope.title || $scope.title === '') { return; }
-      $scope.articles.push({title: $scope.title, body: $scope.body});
+      $scope.articles.push({
+        title: $scope.title,
+        body: $scope.body,
+        comments: [{author: 'Joe', content: 'Hello'}]
+      });
       $scope.title = '';
       $scope.body = '';
     };

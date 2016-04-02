@@ -12,7 +12,7 @@ angular.module('sportsHub', ['ui.router'])
       })
       .state('articles', {
         url: '/articles/{id}',
-        templateUrl: 'articles/html',
+        templateUrl: '/articles.html',
         controller: 'ArticlesCtrl',
       });
 

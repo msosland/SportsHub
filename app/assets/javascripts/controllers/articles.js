@@ -4,7 +4,8 @@ angular.module('sportsHub')
 .controller('ArticlesCtrl', [
   '$scope',
   '$stateParams',
-  'posts',
-  function($scope, $stateParams, posts){
+  'articles',
+  function($scope, $stateParams, articles){
+    $scope.article = articles.articles[$stateParams.id];
 
 }]);

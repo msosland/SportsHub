@@ -12,7 +12,7 @@
     <ui-view></ui-view>
     <script type="text/ng-template" id="/home.html">
       <div ng-repeat="article in articles">
-        {{article}}
+        <a href="#/articles/{{$index}}">{{article.title}}</a>
       </div>
       <form ng-submit="addArticle()">
         <input type="text" ng-model="title"></input>
@@ -20,5 +20,12 @@
         <button type="submit">Publish</button>
       </form>
     </script>
+    <script type="text/ng-template" id="/articles.html">
+      {{article.title}}
+      {{article.body}}
+      <div ng-repeat="comment in article.comments">
+        {{comment.content}}
+        {{comment.author}}
+      </div>
   </body>
 </html>
