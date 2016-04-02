@@ -8,6 +8,6 @@ class TagSearch extends React.Component {
   }
 }
 
-Headerstrip.propTypes = {
+TagSearch.propTypes = {
   query: React.PropTypes.string
 };
