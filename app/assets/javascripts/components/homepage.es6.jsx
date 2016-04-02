@@ -2,10 +2,15 @@ class Homepage extends React.Component {
   render () {
     return (
       <div>
-        <header>
+        <header className="top-nav">
           <Headerstrip />
         </header>
-        <div>Text: {this.props.text}</div>
+        <div className="body">
+          <div>Text: {this.props.text}</div>
+          <div>
+            <TagSearch query="nba" /><TagSearch query="nfl" /><TagSearch query="nhl" /><TagSearch query="mlb" />
+          </div>
+        </div>
       </div>
     );
   }
