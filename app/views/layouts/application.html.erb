@@ -8,15 +8,24 @@
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
   </head>
-  <body ng-app="sportsHub" ng-controller="MainCtrl">
-    <div ng-repeat="article in articles">
-      {{article}}
-    </div>
-    <form ng-submit="addArticle()">
-      <input type="text" ng-model="title"></input>
-      <input type="text" ng-model="body"></input>
-      <button type="submit">Publish</button>
-    </form>
-
+  <body ng-app="sportsHub">
+    <ui-view></ui-view>
+    <script type="text/ng-template" id="/home.html">
+      <div ng-repeat="article in articles">
+        <a href="#/articles/{{$index}}">{{article.title}}</a>
+      </div>
+      <form ng-submit="addArticle()">
+        <input type="text" ng-model="title"></input>
+        <input type="text" ng-model="body"></input>
+        <button type="submit">Publish</button>
+      </form>
+    </script>
+    <script type="text/ng-template" id="/articles.html">
+      {{article.title}}
+      {{article.body}}
+      <div ng-repeat="comment in article.comments">
+        {{comment.content}}
+        {{comment.author}}
+      </div>
   </body>
 </html>
