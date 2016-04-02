@@ -3,12 +3,9 @@
 angular.module('sportsHub')
 .controller('MainCtrl', [
   '$scope',
-  function($scope){
-    $scope.articles = [
-      '1',
-      '2',
-      '3'
-    ];
+  'articles',
+  function($scope, articles){
+    $scope.articles = articles.articles;
 
     $scope.addArticle = function(){
       if(!$scope.title || $scope.title === '') { return; }
