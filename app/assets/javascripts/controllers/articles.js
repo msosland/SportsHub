@@ -12,8 +12,9 @@ angular.module('sportsHub')
       if($scope.content === '') {return; }
       $scope.article.comments.push({
         content: $scope.content,
-        author: 'user'
+        author: 'user',
       });
+      $scope.article.usersWhoCommented.push('user');
       $scope.body = '';
     };
 }]);
