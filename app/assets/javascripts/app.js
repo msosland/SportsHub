@@ -1,4 +1,4 @@
-angular.module('sportsHub', ['ui.router'])
+angular.module('sportsHub', ['ui.router', 'templates'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
@@ -7,12 +7,12 @@ angular.module('sportsHub', ['ui.router'])
     $stateProvider
       .state('home', {
         url: '/home',
-        templateUrl: '/home.html',
+        templateUrl: 'home/_home.html',
         controller: 'MainCtrl'
       })
       .state('articles', {
         url: '/articles/{id}',
-        templateUrl: '/articles.html',
+        templateUrl: 'articles/_articles.html',
         controller: 'ArticlesCtrl',
       });
 

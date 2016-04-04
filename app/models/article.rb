@@ -6,4 +6,7 @@ class Article < ActiveRecord::Base
   has_many :tags, through: :taggings
   has_many :comments
   has_many :users_who_commented, through: :comments, source: :author
+
+  def as_json(options = {})
+    super(options).merge(comments: comments, tags: tags)
 end
