@@ -12,7 +12,10 @@ angular.module('sportsHub')
       $scope.articles.push({
         title: $scope.title,
         body: $scope.body,
-        comments: [{author: 'Joe', content: 'Hello'}]
+        comments: [],
+        tags: [],
+        usersWhoFavorited: [],
+        usersWhoCommented: []
       });
       $scope.title = '';
       $scope.body = '';

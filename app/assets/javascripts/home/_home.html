@@ -1,0 +1,9 @@
+
+<div ng-repeat="article in articles">
+  <a href="#/articles/{{$index}}">{{article.title}}</a>
+</div>
+<form ng-submit="addArticle()">
+  <input type="text" ng-model="title"></input>
+  <input type="text" ng-model="body"></input>
+  <button type="submit">Publish</button>
+</form>
