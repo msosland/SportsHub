@@ -8,26 +8,7 @@
   </head>
   <body ng-app="sportsHub">
     <ui-view></ui-view>
-    <script type="text/ng-template" id="/home.html">
-      <div ng-repeat="article in articles">
-        <a href="#/articles/{{$index}}">{{article.title}}</a>
-      </div>
-      <form ng-submit="addArticle()">
-        <input type="text" ng-model="title"></input>
-        <input type="text" ng-model="body"></input>
-        <button type="submit">Publish</button>
-      </form>
-    </script>
-    <script type="text/ng-template" id="/articles.html">
-      {{article.title}}
-      {{article.body}}
-      <div ng-repeat="comment in article.comments">
-        {{comment.content}}
-        {{comment.author}}
-      </div>
-      <form ng-submit="addComment()">
-        <input type="text" ng-model="content"></input>
-        <button type="submit">Comment</button>
-      </form>
+
+
   </body>
 </html>

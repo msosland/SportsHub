@@ -15,6 +15,6 @@ angular.module('sportsHub')
         author: 'user',
       });
       $scope.article.usersWhoCommented.push('user');
-      $scope.body = '';
+      $scope.content = '';
     };
 }]);
