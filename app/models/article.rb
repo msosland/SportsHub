@@ -9,4 +9,5 @@ class Article < ActiveRecord::Base
 
   def as_json(options = {})
     super(options).merge(comments: comments, tags: tags)
+  end
 end
